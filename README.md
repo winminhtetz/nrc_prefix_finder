@@ -1,49 +1,22 @@
-A server app built using [Shelf](https://pub.dev/packages/shelf),
-configured to enable running with [Docker](https://www.docker.com/).
+# NRC Prefix Finder API
 
-This sample code handles HTTP GET requests to `/` and `/echo/<message>`
+## GET: /api/all
 
-# Running the sample
-
-## Running with the Dart SDK
-
-You can run the example with the [Dart SDK](https://dart.dev/get-dart)
-like this:
+မြို့နယ်အလိုက် သက်ဆိုင်ရာ နံပါတ်၊ အက္ခရာစဉ်များ နှင့် တိုင်းဒေသကြီး၊ ပြည်နယ် နံပါတ်စဉ်များ ကိုရယူနိုင်ပါသည်။
 
 ```
-$ dart run bin/server.dart
-Server listening on port 8080
+https://nrc-prefix-finder-jiyum8b-wayne.globeapp.dev/api/all
 ```
-
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
-
-## Running with Docker
-
-If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
-can build and run with the `docker` command:
+## GET: /api/union_territories
+ပြည်ထောင်စုနယ်မြေများ (ကချင်၊ကယား၊ ...)  သီးသန့် လည်းရယူနိုင်ပါသည်။
 
 ```
-$ docker build . -t myserver
-$ docker run -it -p 8080:8080 myserver
-Server listening on port 8080
+https://nrc-prefix-finder-jiyum8b-wayne.globeapp.dev/api/union_territories
+```
+## GET: /api/nrc_prefix_codes
+တိုင်းဒေသကြီး၊ ပြည်နယ်အလိုက် အက္ခရာစဉ်များ သီးသန့် လည်းရယူနိုင်ပါသည်။
+
+```
+https://nrc-prefix-finder-jiyum8b-wayne.globeapp.dev/api/nrc_prefix_codes
 ```
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
-
-You should see the logging printed in the first terminal:
-```
-2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
-2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
-```
