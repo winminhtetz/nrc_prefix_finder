@@ -21,7 +21,7 @@ Future<Response> getNRCPrefixAll(Request request) async {
     );
   } else {
     return Response.internalServerError(
-      body: 'OpenAI request failed: ${response.body}',
+      body: 'An Error Occured: ${response.body}',
     );
   }
 }
@@ -37,7 +37,7 @@ Future<Response> getUnionTerritories(Request request) async {
     );
   } else {
     return Response.internalServerError(
-      body: 'OpenAI request failed: ${response.body}',
+      body: 'An Error Occured: ${response.body}',
     );
   }
 }
@@ -53,7 +53,7 @@ Future<Response> getNRCPrefixCodes(Request request) async {
     );
   } else {
     return Response.internalServerError(
-      body: 'OpenAI request failed: ${response.body}',
+      body: 'An Error Occured: ${response.body}',
     );
   }
 }
